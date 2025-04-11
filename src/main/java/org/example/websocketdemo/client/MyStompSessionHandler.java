@@ -44,4 +44,9 @@ public class MyStompSessionHandler extends StompSessionHandlerAdapter {
         });
                 System.out.println("Client Subscribe to topic/messages");
     }
+
+    @Override
+    public void handleTransportError(StompSession session, Throwable exception) {
+        exception.printStackTrace();
+    }
 }
